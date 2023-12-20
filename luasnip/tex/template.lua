@@ -36,8 +36,8 @@ return {
 				% indentfirst
 				%% 添加首行缩进，两个字符，用于中文文档
 				%% 用于英文文档时注释以下两行
-				\usepackage{indentfirst}
-				\setlength{\parindent}{2em}
+				%% \usepackage{indentfirst}
+				%% \setlength{\parindent}{2em}
 
 				%xcolor
 				\usepackage[dvipsnames]{xcolor}

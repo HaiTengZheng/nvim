@@ -29,6 +29,12 @@ return {
 	a({trig='xx', dscr="cross"}, {t('\\times ')}, { condition=math }),
 	a({trig='->', dscr="to"}, {t('\\to ')}, { condition=math }),
 
+	-- keyboard characters
+	a({ trig='verb', desr="keyboard characters \\verb!! or \\verb\"\" "},
+		fmta([[
+				\verb!<>!<>
+			]],
+			{ i(1), i(0) })),
 
 
 	-- calculus

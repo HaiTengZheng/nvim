@@ -51,10 +51,6 @@ return {
 		)
 	),
 
-	a({ trig='\\use', desr="usepackage"},
-		fmta([[\usepackage{<>}<>]],
-			{ i(1), i(0) })),
-
 
 	s({ trig='def', dscr='definition'},
 		fmt([[
@@ -93,4 +89,14 @@ return {
 	--a({ trig='tti', desr="bold text"},
 		--fmta([[\textit{<>}<>]],
 			--{ i(1), i(0) })),
+	--
+	a({ trig='lsrust', dscr='begin{lstlisting} / end{lstlisting}'},
+		fmt([[
+			\begin{lstlisting}[language=rust, style=boxed]
+				<>
+			\end{lstlisting}]],
+			{ i(1) },
+			{ delimiters='<>' }
+		)
+	),
 }

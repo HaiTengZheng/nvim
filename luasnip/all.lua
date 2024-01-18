@@ -70,4 +70,44 @@ return {
 		fmta([[/* <> */]],
 			{ i(1) })),
 
+	s({trig='bashenv', dscr="bash script template"},
+		fmt([[
+				#!/usr/bin/env bash
+
+				# Filename	: <>
+				# Date      : 2023-<>-<>
+				# Author    : haiteng.zheng
+				# Mail      : haiteng.zheng@outlook.com
+				# Function  : The scripts function <>
+				# Version   : 0.1
+
+			]],
+			{ i(1), i(2), i(3), i(4) },
+			{ delimiters = "<>" }
+		)
+	),
+
+	s({trig='cnet', dscr="c network preamble"},
+		fmt([[
+				#include <sys/types.h>
+				#include <sys/socket.h>
+				#include <netinet/in.h>
+				#include <arpa/inet.h>
+				#include <netdb.h>
+				#include <unistd.h>
+				#include <errno.h>
+
+				#define ISVALIDSOCKET(s) ((s) >= 0)
+				#define CLOSESOCKET(s) close(s)
+				#define SOCKET int
+				#define GETSOCKETERRNO() (errno)
+
+				#include <stdio.h>
+				#include <string.h>
+				#include <time.h>
+			]],
+			{},
+			{ delimiters = "{}" }
+		)
+	),
 }

@@ -11,6 +11,7 @@ vim.o.expandtap = true
 
 vim.o.autoindent = true
 vim.o.cursorline = true
+vim.o.cursorcolumn = true
 vim.g.encodeing = "UTF-8"
 vim.o.fileencoding = "utf-8"
 
@@ -45,6 +46,13 @@ require("gruvbox").setup({
 	transparent_mode = false,
 })
 vim.cmd("colorscheme gruvbox")
-vim.o.background = "dark" -- or "light" for light mode
+vim.o.background = "dark" -- "dark" -- or "light" for light mode
 vim.o.termguicolors = true
 
+-- no auto comment
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    vim.opt_local.formatoptions:remove({ 'r', 'o' })
+  end,
+})

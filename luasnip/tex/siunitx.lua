@@ -28,10 +28,10 @@ return {
 
 	-- 单位
 	s({ trig='\\unit', desr="\\unit[<options>]{<unit>}"},
-		fmta([[\unit{<>} <>]],
+		fmta([[\unit{<>}<>]],
 			{ i(1), i(0) })),
 	s({ trig='\\qty', dscr='\\qty[<options>]{<number>}{<unit>}'},
-		fmta([[\qty{<>}{<>} <>]],
+		fmta([[\qty{<>}{<>}<>]],
 			{ i(1), i(2), i(0) })),
 	---- 以 ; 分隔
 	s({ trig='\\qtylist', dscr='\\qtylist[<options>]{<numbers>}{<unit>}'},
@@ -52,4 +52,8 @@ return {
 	s({ trig='\\complexqty', desr="\\complexqty[<options>]{<number>}{<unit>}"},
 		fmta([[\complexqty{<>}{<>} <>]],
 			{ i(1), i(2), i(0) })),
+
+	--
+	-- \sisetup{<options>}
+	-- \tablenum[<options>]{<number>}
 }

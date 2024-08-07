@@ -6,7 +6,7 @@ local a = require("luasnip").extend_decorator.apply(s, { snippetType = "autosnip
 return {
 	-- subscript and supscript
 	a({ trig='(%a)(%d)', regTrig=true, dscr='auto supscript for 2+ digits '},
-		fmt([[<>^{<>} ]],
+		fmt([[<>^{<>}]],
 			{ f(function(_, snip) return snip.captures[1] end),
 			f(function(_, snip) return snip.captures[2] end) },
 			{ delimiters='<>' }
@@ -14,7 +14,7 @@ return {
 			{ condition=math }
 	),
 	a({ trig='(%a)^(.%w)', regTrig=true, dscr='auto supscript for 2+ character'},
-		fmt([[<>^{<>} ]],
+		fmt([[<>^{<>}]],
 			{ f(function(_, snip) return snip.captures[1] end),
 			f(function(_, snip) return snip.captures[2] end) },
 			{ delimiters='<>' }
@@ -22,7 +22,7 @@ return {
 			{ condition=math }
 	),
 	a({ trig='(%a)(%d)', regTrig=true, dscr='auto subscript for 2+ digits'},
-		fmt([[<>_{<>} ]],
+		fmt([[<>_{<>}]],
 			{ f(function(_, snip) return snip.captures[1] end),
 			f(function(_, snip) return snip.captures[2] end)},
 			{ delimiters='<>' }
@@ -30,7 +30,7 @@ return {
 			{ condition=math }
 	),
 	a({ trig='(%a)_(%w%w)', regTrig=true, dscr='auto subscript for 2+ character'},
-		fmt([[<>_{<>} ]],
+		fmt([[<>_{<>}]],
 			{ f(function(_, snip) return snip.captures[1] end),
 			f(function(_, snip) return snip.captures[2] end)},
 			{ delimiters='<>' }

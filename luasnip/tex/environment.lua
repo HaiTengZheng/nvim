@@ -24,6 +24,7 @@ return {
 		fmt([[
 			\begin{enumerate}
 				\item <>
+				\item
 			\end{enumerate}]],
 			{ i(0) },
 			{ delimiters='<>' }
